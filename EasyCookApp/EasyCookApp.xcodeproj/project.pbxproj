@@ -15,6 +15,7 @@
 		9D461A2826CFE83000308C15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D461A2626CFE83000308C15 /* LaunchScreen.storyboard */; };
 		9D461A3326CFE83100308C15 /* EasyCookAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D461A3226CFE83100308C15 /* EasyCookAppTests.swift */; };
 		9D461A3E26CFE83100308C15 /* EasyCookAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D461A3D26CFE83100308C15 /* EasyCookAppUITests.swift */; };
+		9D461A4C26D0726B00308C15 /* IngredientesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D461A4B26D0726A00308C15 /* IngredientesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9D461A3926CFE83100308C15 /* EasyCookAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyCookAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D461A3D26CFE83100308C15 /* EasyCookAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyCookAppUITests.swift; sourceTree = "<group>"; };
 		9D461A3F26CFE83100308C15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D461A4B26D0726A00308C15 /* IngredientesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				9D461A2426CFE83000308C15 /* Assets.xcassets */,
 				9D461A2626CFE83000308C15 /* LaunchScreen.storyboard */,
 				9D461A2926CFE83000308C15 /* Info.plist */,
+				9D461A4B26D0726A00308C15 /* IngredientesViewController.swift */,
 			);
 			path = EasyCookApp;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			files = (
 				9D461A2026CFE82E00308C15 /* ViewController.swift in Sources */,
 				9D461A1C26CFE82E00308C15 /* AppDelegate.swift in Sources */,
+				9D461A4C26D0726B00308C15 /* IngredientesViewController.swift in Sources */,
 				9D461A1E26CFE82E00308C15 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
