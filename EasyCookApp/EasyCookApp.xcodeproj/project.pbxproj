@@ -17,6 +17,7 @@
 		9D461A3E26CFE83100308C15 /* EasyCookAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D461A3D26CFE83100308C15 /* EasyCookAppUITests.swift */; };
 		9D461A4C26D0726B00308C15 /* IngredientesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D461A4B26D0726A00308C15 /* IngredientesViewController.swift */; };
 		9D8D4E3426D990A400005F73 /* PagReceitaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D4E3326D990A400005F73 /* PagReceitaViewController.swift */; };
+		9D8D4E3726D9C02800005F73 /* CommentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D4E3626D9C02800005F73 /* CommentsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		9D461A3F26CFE83100308C15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D461A4B26D0726A00308C15 /* IngredientesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientesViewController.swift; sourceTree = "<group>"; };
 		9D8D4E3326D990A400005F73 /* PagReceitaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagReceitaViewController.swift; sourceTree = "<group>"; };
+		9D8D4E3626D9C02800005F73 /* CommentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			children = (
 				9D461A1F26CFE82E00308C15 /* ViewController.swift */,
 				9D8D4E3326D990A400005F73 /* PagReceitaViewController.swift */,
+				9D8D4E3626D9C02800005F73 /* CommentsCollectionViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D8D4E3726D9C02800005F73 /* CommentsCollectionViewCell.swift in Sources */,
 				9D8D4E3426D990A400005F73 /* PagReceitaViewController.swift in Sources */,
 				9D461A2026CFE82E00308C15 /* ViewController.swift in Sources */,
 				9D461A1C26CFE82E00308C15 /* AppDelegate.swift in Sources */,
