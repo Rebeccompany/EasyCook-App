@@ -39,8 +39,13 @@ class PagReceitaViewController: UIViewController, UICollectionViewDelegate, UICo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Banoffe"
         
-        // Dentro do didLoad
+        let but = UIBarButtonItem(image: UIImage(systemName: "heart"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(actFave))
+        navigationItem.rightBarButtonItem = but
+        
         view.addSubview(scrollView)
         scrollView.contentSize = CGSize(width: view.frame.width, height: view.frame.height * 1.6)
         
@@ -66,7 +71,9 @@ class PagReceitaViewController: UIViewController, UICollectionViewDelegate, UICo
         ratingLabel.text = "Avaliação média: 3"
         commentButton.setTitle("Comentar e avaliar", for: .normal)
         commentButton.setTitleColor(.black, for: .normal)
-//        commentButton.setImage(UIImage(named: "plus.circle"), for: .normal)
+        commentButton.setTitleColor(.systemGray3, for: .highlighted)
+        commentButton.setImage(UIImage(named: "plus.circle"), for: .normal)
+        commentButton.tintColor = .systemBackground
     }
     
     func scrollElements(){
@@ -92,7 +99,7 @@ class PagReceitaViewController: UIViewController, UICollectionViewDelegate, UICo
     
     func setConstraints(){
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 10).isActive = true
+        scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
         scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
@@ -174,6 +181,10 @@ class PagReceitaViewController: UIViewController, UICollectionViewDelegate, UICo
         collection.heightAnchor.constraint(equalToConstant: 150).isActive = true
         collection.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15).isActive = true
         collection.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+    }
+    
+    @objc func actFave(){
+        print("Favoritou")
     }
     
     //MARK: CollectionView Delegate
