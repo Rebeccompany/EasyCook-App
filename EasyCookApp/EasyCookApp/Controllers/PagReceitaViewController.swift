@@ -35,7 +35,22 @@ class PagReceitaViewController: UIViewController, UICollectionViewDelegate, UICo
         
         return col
     }()
-
+    
+    init(recipe: Recipe) {
+        super.init(nibName: nil, bundle: nil)
+        navigationItem.title = recipe.title.first
+        prepareLabel.text = "Tempo de preparo: \(recipe.preparationTime)"
+        yieldLabel.text = "Rendimento: \(recipe.portions) porções"
+        textView.text = recipe.preparationMethod
+        textView.font = .systemFont(ofSize: 24)
+        ing1.text = recipe.ingredients[0].name.first
+        textView.isEditable = false
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,16 +71,9 @@ class PagReceitaViewController: UIViewController, UICollectionViewDelegate, UICo
     
     func configureElements(){
         usernameLabel.text = "@totitaus"
-        timeLabel.text = "Tempo de preparo: 2 horas"
-        yieldLabel.text = "Rendimento: 3 porções"
-        imageView.backgroundColor = .red
         ingredientesLabel.text = "Ingredientes"
         ingredientesLabel.font = .boldSystemFont(ofSize: 20)
-        ing1.text = "1 cacho de banana nanica"
-        ing2.text = "1 chantilly"
-        prepareLabel.text = "Modo de Preparo"
         prepareLabel.font = .boldSystemFont(ofSize: 20)
-        textView.backgroundColor = .blue
         commentsLabel.text = "Avaliações e comentários"
         commentsLabel.font = .boldSystemFont(ofSize: 20)
         ratingLabel.text = "Avaliação média: 3"

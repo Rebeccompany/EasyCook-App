@@ -70,7 +70,7 @@
         <!--Nova Receita-->
         <scene sceneID="5VP-vf-ZJP">
             <objects>
-                <viewController title="Nova Receita" id="dhK-T3-HLW" sceneMemberID="viewController">
+                <viewController title="Nova Receita" id="dhK-T3-HLW" customClass="NewRecipeViewControllerFirst" customModule="EasyCookApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KZC-dz-Hmf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,10 +145,15 @@
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="dtO-Xy-Zps"/>
                         <barButtonItem key="rightBarButtonItem" title="Continuar" id="KMp-c9-ZD1">
                             <connections>
-                                <segue destination="Vdy-WQ-rzc" kind="show" id="S1x-7t-gJH"/>
+                                <action selector="continueRegistration:" destination="dhK-T3-HLW" id="GLQ-wG-S7v"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="portion" destination="SuC-wU-20l" id="OeE-cZ-cq0"/>
+                        <outlet property="recipeTitle" destination="W1i-GP-UjB" id="xRx-TO-qco"/>
+                        <outlet property="time" destination="IVZ-w5-dOq" id="aMq-cS-XOi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QII-gx-oT0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,17 +162,17 @@
         <!--Ingredientes-->
         <scene sceneID="NJg-8p-Wra">
             <objects>
-                <viewController title="Ingredientes" id="Vdy-WQ-rzc" customClass="IngredientesViewController" customModule="EasyCookApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="new2" title="Ingredientes" id="Vdy-WQ-rzc" customClass="IngredientesViewController" customModule="EasyCookApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="38s-8V-OJb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nzg-fh-TD0">
-                                <rect key="frame" x="0.0" y="93" width="414" height="340"/>
+                                <rect key="frame" x="0.0" y="81" width="414" height="406"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhu-4F-paz">
-                                <rect key="frame" x="27" y="471" width="217" height="22"/>
+                                <rect key="frame" x="27" y="525" width="217" height="22"/>
                                 <state key="normal" title="Adicionar ingrediente" image="plus.circle" catalog="system">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
@@ -205,13 +210,13 @@
         <!--Modo de Preparo-->
         <scene sceneID="zjY-Pp-qir">
             <objects>
-                <viewController title="Modo de Preparo" id="98b-YP-H2I" sceneMemberID="viewController">
+                <viewController title="Modo de Preparo" id="98b-YP-H2I" customClass="NewRecipeViewControllerFirst" customModule="EasyCookApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BlO-Sr-eEq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MVb-pH-nIF">
-                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>

@@ -6,10 +6,15 @@
 //
 
 import UIKit
+import Combine
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var searchBar: UISearchBar!
+    
+    let session: URLSession = .shared
+    var recipes: [Recipe] = []
+    var cancellables: Set<AnyCancellable> = .init()
     
     lazy var collection: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -32,6 +37,27 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         setConstraints()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        requestAllRecipes()
+    }
+    
+    private func requestAllRecipes() {
+        session
+            .dataTaskPublisher(for: URL(string: "http://localhost:3000/recipes")!)
+            .map(\.data)
+            .decode(type: [Recipe].self, decoder: JSONDecoder())
+            .replaceError(with: [])
+            .receive(on: RunLoop.main)
+            .sink(receiveValue: receiveDataAndReloadTable)
+            .store(in: &cancellables)
+    }
+    
+    private func receiveDataAndReloadTable(_ recipes: [Recipe]) {
+        self.recipes = recipes
+        collection.reloadData()
+    }
+    
     func setConstraints(){
         collection.translatesAutoresizingMaskIntoConstraints = false
         collection.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15).isActive = true
@@ -42,19 +68,19 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     //MARK: Collection Delegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return recipes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "homeCell", for: indexPath) as? HomeCollectionViewCell else {preconditionFailure()}
         
-        cell.name.text = "Banoffe"
+        cell.name.text = recipes[indexPath.row].title.first
         cell.imageView.image = UIImage(named: "banoffe")
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = PagReceitaViewController()
+        let vc = PagReceitaViewController(recipe: recipes[indexPath.row])
         navigationController?.pushViewController(vc, animated: true)
     }
 

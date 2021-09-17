@@ -34,7 +34,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
         self.backgroundColor = .systemGray3
         
         name.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8).isActive = true
-        name.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        name.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         name.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -5).isActive = true
         name.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
