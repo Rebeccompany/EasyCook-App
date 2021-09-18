@@ -210,7 +210,7 @@
         <!--Modo de Preparo-->
         <scene sceneID="zjY-Pp-qir">
             <objects>
-                <viewController title="Modo de Preparo" id="98b-YP-H2I" customClass="NewRecipeViewControllerFirst" customModule="EasyCookApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Modo de Preparo" id="98b-YP-H2I" customClass="NewRecipeViewControllerThree" customModule="EasyCookApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BlO-Sr-eEq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -233,12 +233,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Modo de Preparo" leftItemsSupplementBackButton="YES" id="aWA-xq-6mf">
-                        <barButtonItem key="rightBarButtonItem" title="Enviar" id="k9z-zn-1Sh"/>
+                        <barButtonItem key="rightBarButtonItem" title="Enviar" id="k9z-zn-1Sh">
+                            <connections>
+                                <action selector="sendRecipe:" destination="98b-YP-H2I" id="nut-z5-Hqi"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="MVb-pH-nIF" id="bwY-IY-ezt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CjM-Y5-t9G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5291" y="-417"/>
+            <point key="canvasLocation" x="5362" y="-417"/>
         </scene>
         <!--Meu Perfil-->
         <scene sceneID="KSe-vN-17b">
