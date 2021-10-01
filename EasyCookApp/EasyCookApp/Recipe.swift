@@ -20,8 +20,7 @@ import Foundation
  }
  */
 
-struct Recipe: Codable {
-    static var shared = Recipe(title: [], preparationMethod: "", preparationTime: 0, portions: 0, ingredients: [])
+struct Recipe: Codable, Equatable {
     
     var title: [String]
     var preparationMethod: String
@@ -38,7 +37,7 @@ struct Recipe: Codable {
     }
 }
 
-struct Ingredient: Codable {
+struct Ingredient: Codable, Equatable {
     var name: [String]
     var quantity: Double
 }

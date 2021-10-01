@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0020CD2707278B00D22DEA /* FormManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0020CC2707278B00D22DEA /* FormManager.swift */; };
+		5B0020CF27072F2E00D22DEA /* FormManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0020CE27072F2E00D22DEA /* FormManagerTests.swift */; };
 		5B5EDE4126F4B77A00029694 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5EDE4026F4B77A00029694 /* Recipe.swift */; };
 		5B5EDE4326F4BAE800029694 /* NewRecipeViewControllerFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5EDE4226F4BAE800029694 /* NewRecipeViewControllerFirst.swift */; };
 		5B5EDE4526F4BEE800029694 /* NewRecipeViewControllerThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5EDE4426F4BEE800029694 /* NewRecipeViewControllerThree.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B0020CC2707278B00D22DEA /* FormManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormManager.swift; sourceTree = "<group>"; };
+		5B0020CE27072F2E00D22DEA /* FormManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormManagerTests.swift; sourceTree = "<group>"; };
 		5B5EDE4026F4B77A00029694 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		5B5EDE4226F4BAE800029694 /* NewRecipeViewControllerFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeViewControllerFirst.swift; sourceTree = "<group>"; };
 		5B5EDE4426F4BEE800029694 /* NewRecipeViewControllerThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeViewControllerThree.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 				9D461A2926CFE83000308C15 /* Info.plist */,
 				9D461A4B26D0726A00308C15 /* IngredientesViewController.swift */,
 				5B5EDE4026F4B77A00029694 /* Recipe.swift */,
+				5B0020CC2707278B00D22DEA /* FormManager.swift */,
 			);
 			path = EasyCookApp;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			children = (
 				9D461A3226CFE83100308C15 /* EasyCookAppTests.swift */,
 				9D461A3426CFE83100308C15 /* Info.plist */,
+				5B0020CE27072F2E00D22DEA /* FormManagerTests.swift */,
 			);
 			path = EasyCookAppTests;
 			sourceTree = "<group>";
@@ -294,6 +300,7 @@
 				9D461A2026CFE82E00308C15 /* HomeViewController.swift in Sources */,
 				9D461A1C26CFE82E00308C15 /* AppDelegate.swift in Sources */,
 				5B5EDE4526F4BEE800029694 /* NewRecipeViewControllerThree.swift in Sources */,
+				5B0020CD2707278B00D22DEA /* FormManager.swift in Sources */,
 				9D461A4C26D0726B00308C15 /* IngredientesViewController.swift in Sources */,
 				9D461A1E26CFE82E00308C15 /* SceneDelegate.swift in Sources */,
 				5B5EDE4126F4B77A00029694 /* Recipe.swift in Sources */,
@@ -305,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D461A3326CFE83100308C15 /* EasyCookAppTests.swift in Sources */,
+				5B0020CF27072F2E00D22DEA /* FormManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="enn-fl-DRy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="enn-fl-DRy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,7 +36,7 @@
                     <navigationItem key="navigationItem" title="Receitas" largeTitleDisplayMode="always" id="5ya-0Y-ug3">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Hub-oD-HiP">
                             <connections>
-                                <segue destination="q00-Jp-aCb" kind="presentation" id="tdX-Pf-xxa"/>
+                                <action selector="addAnRecipe:" destination="BYZ-38-t0r" id="eAy-ch-w9a"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -70,47 +71,47 @@
         <!--Nova Receita-->
         <scene sceneID="5VP-vf-ZJP">
             <objects>
-                <viewController title="Nova Receita" id="dhK-T3-HLW" customClass="NewRecipeViewControllerFirst" customModule="EasyCookApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="new1" title="Nova Receita" id="dhK-T3-HLW" customClass="NewRecipeViewControllerFirst" customModule="EasyCookApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KZC-dz-Hmf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t9s-6l-CHn">
-                                <rect key="frame" x="85" y="84" width="244" height="128"/>
+                                <rect key="frame" x="85" y="72" width="244" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="t9s-6l-CHn" secondAttribute="height" multiplier="61:32" id="Cd7-3I-9gK"/>
                                     <constraint firstAttribute="height" constant="128" id="kkO-gQ-yeh"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W1i-GP-UjB">
-                                <rect key="frame" x="20" y="281" width="374" height="34"/>
+                                <rect key="frame" x="20" y="269" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempo de Preparo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ita-Bw-UTL">
-                                <rect key="frame" x="20" y="353" width="394" height="21"/>
+                                <rect key="frame" x="20" y="341" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IVZ-w5-dOq">
-                                <rect key="frame" x="20" y="384" width="374" height="34"/>
+                                <rect key="frame" x="20" y="372" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rendimento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epe-fd-CWC">
-                                <rect key="frame" x="20" y="456" width="394" height="21"/>
+                                <rect key="frame" x="20" y="444" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SuC-wU-20l">
-                                <rect key="frame" x="20" y="487" width="374" height="34"/>
+                                <rect key="frame" x="20" y="475" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da Receita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VN-nr-X1C">
-                                <rect key="frame" x="20" y="250" width="394" height="21"/>
+                                <rect key="frame" x="20" y="238" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -195,11 +196,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ingrediente" id="sZi-Gd-fcf">
-                        <barButtonItem key="rightBarButtonItem" title="Continuar" id="O1o-UU-wkl">
-                            <connections>
-                                <segue destination="98b-YP-H2I" kind="show" id="c3F-9V-cid"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Continuar" id="O1o-UU-wkl"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEK-2n-3yU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -210,13 +207,13 @@
         <!--Modo de Preparo-->
         <scene sceneID="zjY-Pp-qir">
             <objects>
-                <viewController title="Modo de Preparo" id="98b-YP-H2I" customClass="NewRecipeViewControllerFirst" customModule="EasyCookApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="new3" title="Modo de Preparo" id="98b-YP-H2I" customClass="NewRecipeViewControllerThree" customModule="EasyCookApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BlO-Sr-eEq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MVb-pH-nIF">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -233,12 +230,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Modo de Preparo" leftItemsSupplementBackButton="YES" id="aWA-xq-6mf">
-                        <barButtonItem key="rightBarButtonItem" title="Enviar" id="k9z-zn-1Sh"/>
+                        <barButtonItem key="rightBarButtonItem" title="Enviar" id="k9z-zn-1Sh">
+                            <connections>
+                                <action selector="sendRecipe:" destination="98b-YP-H2I" id="nut-z5-Hqi"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="MVb-pH-nIF" id="bwY-IY-ezt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CjM-Y5-t9G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5291" y="-417"/>
+            <point key="canvasLocation" x="5362" y="-417"/>
         </scene>
         <!--Meu Perfil-->
         <scene sceneID="KSe-vN-17b">
@@ -296,13 +300,10 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q00-Jp-aCb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Qm-8d-Dw8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="dhK-T3-HLW" kind="relationship" relationship="rootViewController" id="gja-DB-t7l"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="myT-fe-twR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -367,7 +368,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="book" catalog="system" width="128" height="102"/>
+        <image name="book" catalog="system" width="128" height="99"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>

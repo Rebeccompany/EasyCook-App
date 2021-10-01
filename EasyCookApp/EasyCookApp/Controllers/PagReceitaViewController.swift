@@ -45,6 +45,7 @@ class PagReceitaViewController: UIViewController, UICollectionViewDelegate, UICo
         textView.font = .systemFont(ofSize: 24)
         ing1.text = recipe.ingredients[0].name.first
         textView.isEditable = false
+        title = recipe.title[0]
     }
     
     required init?(coder: NSCoder) {
@@ -56,7 +57,7 @@ class PagReceitaViewController: UIViewController, UICollectionViewDelegate, UICo
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
-        title = "Banoffe"
+        
         
         let but = UIBarButtonItem(image: UIImage(systemName: "heart"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(actFave))
         navigationItem.rightBarButtonItem = but

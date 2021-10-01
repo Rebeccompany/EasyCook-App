@@ -12,6 +12,15 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
     @IBOutlet weak var searchBar: UISearchBar!
     
+    @IBAction func addAnRecipe(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(identifier: "new1") as! NewRecipeViewControllerFirst
+        vc.formManager = FormManager()
+        
+        let nvc = UINavigationController(rootViewController: vc)
+        present(nvc, animated: true, completion: nil)
+    }
+    
     let session: URLSession = .shared
     var recipes: [Recipe] = []
     var cancellables: Set<AnyCancellable> = .init()
