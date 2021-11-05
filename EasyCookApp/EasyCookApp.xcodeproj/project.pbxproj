@@ -12,6 +12,7 @@
 		5B5EDE4126F4B77A00029694 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5EDE4026F4B77A00029694 /* Recipe.swift */; };
 		5B5EDE4326F4BAE800029694 /* NewRecipeViewControllerFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5EDE4226F4BAE800029694 /* NewRecipeViewControllerFirst.swift */; };
 		5B5EDE4526F4BEE800029694 /* NewRecipeViewControllerThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5EDE4426F4BEE800029694 /* NewRecipeViewControllerThree.swift */; };
+		5BCEB4D827354E72008091C9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCEB4D727354E72008091C9 /* LoginView.swift */; };
 		9D1DC71726DA796C0068BC0E /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1DC71626DA796C0068BC0E /* HomeCollectionViewCell.swift */; };
 		9D461A1C26CFE82E00308C15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D461A1B26CFE82E00308C15 /* AppDelegate.swift */; };
 		9D461A1E26CFE82E00308C15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D461A1D26CFE82E00308C15 /* SceneDelegate.swift */; };
@@ -49,6 +50,7 @@
 		5B5EDE4026F4B77A00029694 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		5B5EDE4226F4BAE800029694 /* NewRecipeViewControllerFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeViewControllerFirst.swift; sourceTree = "<group>"; };
 		5B5EDE4426F4BEE800029694 /* NewRecipeViewControllerThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeViewControllerThree.swift; sourceTree = "<group>"; };
+		5BCEB4D727354E72008091C9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9D1DC71626DA796C0068BC0E /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		9D461A1826CFE82E00308C15 /* EasyCookApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyCookApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D461A1B26CFE82E00308C15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				9D8D4E3626D9C02800005F73 /* CommentsCollectionViewCell.swift */,
 				5B5EDE4226F4BAE800029694 /* NewRecipeViewControllerFirst.swift */,
 				5B5EDE4426F4BEE800029694 /* NewRecipeViewControllerThree.swift */,
+				5BCEB4D727354E72008091C9 /* LoginView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				5B5EDE4326F4BAE800029694 /* NewRecipeViewControllerFirst.swift in Sources */,
 				9D461A2026CFE82E00308C15 /* HomeViewController.swift in Sources */,
 				9D461A1C26CFE82E00308C15 /* AppDelegate.swift in Sources */,
+				5BCEB4D827354E72008091C9 /* LoginView.swift in Sources */,
 				5B5EDE4526F4BEE800029694 /* NewRecipeViewControllerThree.swift in Sources */,
 				5B0020CD2707278B00D22DEA /* FormManager.swift in Sources */,
 				9D461A4C26D0726B00308C15 /* IngredientesViewController.swift in Sources */,
@@ -483,6 +487,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R36LU3NVAA;
 				INFOPLIST_FILE = EasyCookApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -502,6 +507,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R36LU3NVAA;
 				INFOPLIST_FILE = EasyCookApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

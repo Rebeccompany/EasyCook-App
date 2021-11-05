@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import SwiftUI
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -37,6 +38,19 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(collection)
+        
+        NotificationCenter
+            .default
+            .publisher(for: .init(rawValue: "canDismiss"))
+            .sink {[weak self] _ in
+                self?.dismiss(animated: true, completion: nil)
+            }.store(in: &cancellables)
+        
+        
+        if !UserDefaults.standard.bool(forKey: "isLoggedIn") {
+            modalPresentationStyle = .fullScreen
+            present(UIHostingController(rootView: LoginView()), animated: true, completion: nil)
+        }
         
         collection.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: "homeCell")
         collection.dataSource = self
